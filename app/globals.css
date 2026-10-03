@@ -1,0 +1,518 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f1eb;
+  color: #1d2521;
+}
+
+.siteHeader {
+  background: #000000;
+  padding: 15px 25px;
+}
+
+.siteHeader h1 {
+  margin: 0 0 10px;
+  color: white;
+}
+
+nav {
+  display: flex;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background: white;
+}
+
+.favoritePage {
+  max-width: 1100px;
+  background: transparent;
+}
+
+.favoriteIntro {
+  border-bottom: 2px solid #1d2521;
+  padding: 10px 0 22px;
+}
+
+.favoriteIntro h1 {
+  margin: 0;
+  color: #1d2521;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.favoriteIntro p {
+  margin: 8px 0 0;
+}
+
+.eyebrow {
+  color: #d45d3c;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.12em;
+}
+
+.bandControls {
+  align-items: end;
+  display: grid;
+  gap: 10px 14px;
+  grid-template-columns: minmax(180px, 1fr) 170px 140px;
+  margin: 26px 0;
+}
+
+.bandControls label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  grid-row: 1;
+}
+
+.bandControls input,
+.bandControls select {
+  background: white;
+  border: 1px solid #9ca49e;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font: inherit;
+  grid-row: 2;
+  min-height: 42px;
+  padding: 0 12px;
+  width: 100%;
+}
+
+.bandControls label:nth-of-type(2) {
+  grid-column: 2;
+}
+
+.bandControls input {
+  grid-column: 1;
+}
+
+.bandControls select {
+  grid-column: 2;
+}
+
+.clearButton,
+.followButton,
+.likeButton {
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+  min-height: 42px;
+  padding: 0 14px;
+}
+
+.clearButton {
+  background: #1d2521;
+  color: white;
+  grid-column: 3;
+  grid-row: 2;
+}
+
+.followingCount {
+  color: #d45d3c;
+  font-weight: bold;
+  grid-column: 1 / -1;
+  margin: 4px 0 0;
+}
+
+.bandGrid {
+  display: grid;
+  gap: 22px;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+
+.bandCard {
+  background: white;
+  border: 1px solid #d5d2ca;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.bandImage {
+  height: 250px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.bandCardContent {
+  padding: 18px;
+}
+
+.bandCardHeading {
+  align-items: start;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.bandCard h2 {
+  margin: 0;
+}
+
+.bandCard h3 {
+  font-size: 1rem;
+  margin-bottom: 8px;
+}
+
+.bandCard p {
+  color: #59625d;
+  margin: 6px 0 0;
+}
+
+.bandCard ul {
+  line-height: 1.5;
+  padding-left: 20px;
+}
+
+.followButton {
+  background: #d45d3c;
+  color: white;
+  flex-shrink: 0;
+}
+
+.followButton.following {
+  background: #d9e6d7;
+  color: #1d2521;
+}
+
+.likeButton {
+  background: #f4f1eb;
+  color: #1d2521;
+  width: 100%;
+}
+
+.emptyState {
+  background: white;
+  border: 1px dashed #9ca49e;
+  padding: 48px 20px;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .favoritePage {
+    margin: 0 auto;
+    padding: 20px 16px;
+  }
+
+  .bandControls {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bandControls label:nth-of-type(2),
+  .bandControls select {
+    grid-column: 2;
+  }
+
+  .bandControls input {
+    grid-column: 1;
+  }
+
+  .clearButton {
+    grid-column: 1 / -1;
+    grid-row: 4;
+  }
+}
+
+main h1 {
+  color: #00703c;
+}
+
+main p {
+  line-height: 1.5;
+}
+
+.gamesPage {
+  max-width: 1200px;
+  background: transparent;
+}
+
+.gamesHeader {
+  border-bottom: 2px solid #1d2521;
+  margin-bottom: 28px;
+  padding-bottom: 18px;
+}
+
+.gamesHeader h1 {
+  color: #1d2521;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0;
+}
+
+.gamesHeader p {
+  margin: 10px 0 0;
+}
+
+.gamesLayout {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(300px, 360px) minmax(0, 1fr);
+}
+
+.gameFormPanel,
+.gameListPanel,
+.gameDetailCard {
+  background: white;
+  border: 1px solid #d5d2ca;
+  border-radius: 12px;
+  box-shadow: 0 8px 18px rgba(29, 37, 33, 0.04);
+  padding: 24px;
+}
+
+.gameForm {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.fieldGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fieldGroup label,
+.searchField,
+.filterField,
+.statusControl label {
+  color: #1d2521;
+  display: flex;
+  flex-direction: column;
+  font-size: 0.86rem;
+  font-weight: 700;
+  gap: 8px;
+}
+
+.gameForm input,
+.gameForm select,
+.searchField input,
+.filterField select,
+.statusControl select {
+  background: #fff;
+  border: 1px solid #9ca49e;
+  border-radius: 8px;
+  font: inherit;
+  min-height: 44px;
+  padding: 0 12px;
+}
+
+.errorText {
+  color: #b42318;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.formActions,
+.actionGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.primaryButton,
+.secondaryButton,
+.smallButton {
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+  min-height: 42px;
+  padding: 0 14px;
+}
+
+.primaryButton {
+  background: #1d2521;
+  color: white;
+}
+
+.secondaryButton,
+.smallButton {
+  background: #f4f1eb;
+  color: #1d2521;
+}
+
+.smallButton.dangerButton {
+  background: #fbe5e2;
+  color: #9b2c1a;
+}
+
+.listToolbar {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1.2fr 0.8fr;
+  margin-bottom: 18px;
+}
+
+.summaryRow {
+  background: #f4f1eb;
+  border-radius: 8px;
+  margin-bottom: 18px;
+  padding: 12px 16px;
+}
+
+.summaryRow p {
+  margin: 0;
+}
+
+.gameList {
+  display: grid;
+  gap: 18px;
+}
+
+.gameCard {
+  background: #fff;
+  border: 1px solid #d5d2ca;
+  border-radius: 12px;
+  padding: 18px;
+}
+
+.gameCardHeader {
+  align-items: start;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.gameTitleLink {
+  color: #1d2521;
+  text-decoration: none;
+}
+
+.gameTitleLink:hover {
+  text-decoration: underline;
+}
+
+.statusBadge {
+  background: #d9e6d7;
+  border-radius: 999px;
+  color: #1d2521;
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  padding: 5px 10px;
+}
+
+.statusBadge--กำลังเล่น {
+  background: #fff0d4;
+}
+
+.statusBadge--เล่นจบแล้ว {
+  background: #d9e6d7;
+}
+
+.statusBadge--ยังไม่เริ่ม {
+  background: #fbe5e2;
+}
+
+.gameDetails {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+}
+
+.gameDetails div {
+  background: #f6f5f3;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.gameDetails dt {
+  color: #59625d;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+}
+
+.gameDetails dd {
+  margin: 0;
+}
+
+.statusControl {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.emptyState {
+  background: white;
+  border: 1px dashed #9ca49e;
+  border-radius: 12px;
+  padding: 48px 20px;
+  text-align: center;
+}
+
+.gameDetailPage {
+  max-width: 900px;
+}
+
+.backLink {
+  color: #1d2521;
+  display: inline-block;
+  font-weight: 700;
+  margin-bottom: 18px;
+  text-decoration: none;
+}
+
+.gameDetailCard h1 {
+  color: #1d2521;
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0 0 18px;
+}
+
+.gameDetailList {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 0;
+}
+
+.gameDetailList div {
+  background: #f6f5f3;
+  border-radius: 8px;
+  padding: 14px 16px;
+}
+
+.gameDetailList dt {
+  color: #59625d;
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.gameDetailList dd {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .gamesLayout,
+  .listToolbar,
+  .gameDetailList,
+  .gameDetails {
+    grid-template-columns: 1fr;
+  }
+
+  .gameCardHeader {
+    flex-direction: column;
+  }
+}
+
